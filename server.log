@@ -1,0 +1,76 @@
+2022-04-24 16:07:26.096  INFO 12252 --- [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-04-24 16:07:26.117  INFO 12252 --- [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7b676112:0/SimpleConnection@779a5f80 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 63402]
+2022-04-24 16:07:26.124  INFO 12252 --- [http-nio-8080-exec-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (directExchange1) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2022-04-24 16:07:26.124  INFO 12252 --- [http-nio-8080-exec-1] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-04-24 16:11:51.148  INFO 10076 --- [main] .SpringbootIntegratesRabbitMqApplication : Starting SpringbootIntegratesRabbitMqApplication using Java 16.0.2 on mao with PID 10076 (H:\程序\大三下期\Springboot整合rabbitMQ\target\classes started by mao in H:\程序\大三下期\Springboot整合rabbitMQ)
+2022-04-24 16:11:51.150 DEBUG 10076 --- [main] .SpringbootIntegratesRabbitMqApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-24 16:11:51.151  INFO 10076 --- [main] .SpringbootIntegratesRabbitMqApplication : The following 1 profile is active: "dev"
+2022-04-24 16:11:51.838  INFO 10076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-24 16:11:51.845  INFO 10076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 16:11:51.845  INFO 10076 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-04-24 16:11:51.916  INFO 10076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-24 16:11:51.916  INFO 10076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 724 ms
+2022-04-24 16:11:52.376  INFO 10076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-24 16:11:52.377  INFO 10076 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-04-24 16:11:52.395  INFO 10076 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#707b1a44:0/SimpleConnection@423a0e1d [delegate=amqp://admin@127.0.0.1:5672/, localPort= 63596]
+2022-04-24 16:11:52.397  INFO 10076 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (directExchange1) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2022-04-24 16:11:52.398  INFO 10076 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-04-24 16:11:52.431  INFO 10076 --- [main] .SpringbootIntegratesRabbitMqApplication : Started SpringbootIntegratesRabbitMqApplication in 1.617 seconds (JVM running for 2.07)
+2022-04-24 16:12:11.519  INFO 10076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 16:12:11.519  INFO 10076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 16:12:11.520  INFO 10076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-24 16:14:29.577  INFO 10076 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-04-24 16:14:30.302  INFO 10076 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-04-24 16:14:30.325  INFO 10076 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-04-24 16:14:33.566  INFO 12728 --- [main] .SpringbootIntegratesRabbitMqApplication : Starting SpringbootIntegratesRabbitMqApplication using Java 16.0.2 on mao with PID 12728 (H:\程序\大三下期\Springboot整合rabbitMQ\target\classes started by mao in H:\程序\大三下期\Springboot整合rabbitMQ)
+2022-04-24 16:14:33.567 DEBUG 12728 --- [main] .SpringbootIntegratesRabbitMqApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-24 16:14:33.568  INFO 12728 --- [main] .SpringbootIntegratesRabbitMqApplication : The following 1 profile is active: "dev"
+2022-04-24 16:14:34.190  INFO 12728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-24 16:14:34.198  INFO 12728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 16:14:34.198  INFO 12728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-04-24 16:14:34.280  INFO 12728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-24 16:14:34.280  INFO 12728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 676 ms
+2022-04-24 16:14:34.742  INFO 12728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-24 16:14:34.752  INFO 12728 --- [main] .SpringbootIntegratesRabbitMqApplication : Started SpringbootIntegratesRabbitMqApplication in 1.525 seconds (JVM running for 1.99)
+2022-04-24 16:14:35.111  INFO 12728 --- [http-nio-8080-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x040x010x00P40xca0x98I0x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-04-24 16:15:41.289  INFO 12728 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 16:15:41.289  INFO 12728 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 16:15:41.290  INFO 12728 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-04-24 16:15:41.334  INFO 12728 --- [http-nio-8080-exec-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-04-24 16:15:41.353  INFO 12728 --- [http-nio-8080-exec-4] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#24f870ee:0/SimpleConnection@3c15f40a [delegate=amqp://admin@127.0.0.1:5672/, localPort= 63770]
+2022-04-24 16:15:41.356  INFO 12728 --- [http-nio-8080-exec-4] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (directExchange1) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2022-04-24 16:15:41.356  INFO 12728 --- [http-nio-8080-exec-4] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-04-24 16:17:26.424  INFO 6348 --- [main] .SpringbootIntegratesRabbitMqApplication : Starting SpringbootIntegratesRabbitMqApplication using Java 16.0.2 on mao with PID 6348 (H:\程序\大三下期\Springboot整合rabbitMQ\target\classes started by mao in H:\程序\大三下期\Springboot整合rabbitMQ)
+2022-04-24 16:17:26.426 DEBUG 6348 --- [main] .SpringbootIntegratesRabbitMqApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-24 16:17:26.426  INFO 6348 --- [main] .SpringbootIntegratesRabbitMqApplication : The following 1 profile is active: "dev"
+2022-04-24 16:17:27.052  INFO 6348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-24 16:17:27.059  INFO 6348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 16:17:27.059  INFO 6348 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-04-24 16:17:27.128  INFO 6348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-24 16:17:27.129  INFO 6348 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
+2022-04-24 16:17:27.571  INFO 6348 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-24 16:17:27.573  INFO 6348 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-04-24 16:17:27.590  INFO 6348 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4b4eced1:0/SimpleConnection@7af443a3 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 63842]
+2022-04-24 16:17:27.593  INFO 6348 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (directExchange1) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2022-04-24 16:17:27.593  INFO 6348 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-04-24 16:17:27.629  INFO 6348 --- [main] .SpringbootIntegratesRabbitMqApplication : Started SpringbootIntegratesRabbitMqApplication in 1.529 seconds (JVM running for 1.958)
+2022-04-24 16:17:32.651  INFO 6348 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 16:17:32.651  INFO 6348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 16:17:32.652  INFO 6348 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-24 16:22:12.786  INFO 6348 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-04-24 16:22:13.174  INFO 6348 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-04-24 16:22:13.194  INFO 6348 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped

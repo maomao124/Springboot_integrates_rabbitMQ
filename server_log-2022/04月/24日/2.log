@@ -1,0 +1,109 @@
+2022-04-24 16:05:09.669  INFO 12028 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-24 16:05:09.672  INFO 12028 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 732 ms
+2022-04-24 16:05:10.155  INFO 12028 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-24 16:05:10.157  INFO 12028 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-04-24 16:05:10.176  INFO 12028 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#33ecbd6c:0/SimpleConnection@5a058be5 [delegate=amqp://admin@127.0.0.1:5672/, localPort= 63255]
+2022-04-24 16:05:10.179  INFO 12028 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (directExchange1) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2022-04-24 16:05:10.179  INFO 12028 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-04-24 16:05:10.218  INFO 12028 --- [main] .SpringbootIntegratesRabbitMqApplication : Started SpringbootIntegratesRabbitMqApplication in 1.682 seconds (JVM running for 2.151)
+2022-04-24 16:05:47.813  INFO 12028 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 16:05:47.813  INFO 12028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 16:05:47.814  INFO 12028 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-24 16:05:47.836 ERROR 12028 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: SimpleMessageConverter only supports String, byte[] and Serializable payloads, received: mao.springboot_integrates_rabbitmq.data.Data] with root cause
+
+java.lang.IllegalArgumentException: SimpleMessageConverter only supports String, byte[] and Serializable payloads, received: mao.springboot_integrates_rabbitmq.data.Data
+	at org.springframework.amqp.support.converter.SimpleMessageConverter.createMessage(SimpleMessageConverter.java:164) ~[spring-amqp-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.support.converter.AbstractMessageConverter.createMessage(AbstractMessageConverter.java:88) ~[spring-amqp-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.support.converter.AbstractMessageConverter.toMessage(AbstractMessageConverter.java:70) ~[spring-amqp-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.support.converter.AbstractMessageConverter.toMessage(AbstractMessageConverter.java:58) ~[spring-amqp-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertMessageIfNecessary(RabbitTemplate.java:1822) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1137) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1130) ~[spring-rabbit-2.4.4.jar:2.4.4]
+	at mao.springboot_integrates_rabbitmq.controller.MyController.test2(MyController.java:42) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.19.jar:5.3.19]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.62.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.19.jar:5.3.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.62.jar:9.0.62]
+	at java.base/java.lang.Thread.run(Thread.java:831) ~[na:na]
+
+2022-04-24 16:06:29.466  INFO 12028 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-04-24 16:06:30.232  INFO 12028 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-04-24 16:06:30.250  INFO 12028 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-04-24 16:06:33.785  INFO 19276 --- [main] .SpringbootIntegratesRabbitMqApplication : Starting SpringbootIntegratesRabbitMqApplication using Java 16.0.2 on mao with PID 19276 (H:\程序\大三下期\Springboot整合rabbitMQ\target\classes started by mao in H:\程序\大三下期\Springboot整合rabbitMQ)
+2022-04-24 16:06:33.787 DEBUG 19276 --- [main] .SpringbootIntegratesRabbitMqApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-24 16:06:33.787  INFO 19276 --- [main] .SpringbootIntegratesRabbitMqApplication : The following 1 profile is active: "dev"
+2022-04-24 16:06:34.446  INFO 19276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-24 16:06:34.453  INFO 19276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 16:06:34.454  INFO 19276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-04-24 16:06:34.527  INFO 19276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-24 16:06:34.527  INFO 19276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 702 ms
+2022-04-24 16:06:34.999  INFO 19276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-24 16:06:35.000  INFO 19276 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [127.0.0.1:5672]
+2022-04-24 16:06:35.018  INFO 19276 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4527f70a:0/SimpleConnection@5a515e5d [delegate=amqp://admin@127.0.0.1:5672/, localPort= 63350]
+2022-04-24 16:06:35.020  INFO 19276 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable or auto-delete Exchange (directExchange1) durable:false, auto-delete:false. It will be deleted by the broker if it shuts down, and can be redeclared by closing and reopening the connection.
+2022-04-24 16:06:35.021  INFO 19276 --- [main] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (queue1) durable:false, auto-delete:false, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2022-04-24 16:06:35.056  INFO 19276 --- [main] .SpringbootIntegratesRabbitMqApplication : Started SpringbootIntegratesRabbitMqApplication in 1.649 seconds (JVM running for 2.138)
+2022-04-24 16:06:40.704  INFO 19276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 16:06:40.704  INFO 19276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 16:06:40.705  INFO 19276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-24 16:07:18.884  INFO 19276 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-04-24 16:07:19.174  INFO 19276 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-04-24 16:07:19.202  INFO 19276 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Shutdown ignored - container is already stopped
+2022-04-24 16:07:22.238  INFO 12252 --- [main] .SpringbootIntegratesRabbitMqApplication : Starting SpringbootIntegratesRabbitMqApplication using Java 16.0.2 on mao with PID 12252 (H:\程序\大三下期\Springboot整合rabbitMQ\target\classes started by mao in H:\程序\大三下期\Springboot整合rabbitMQ)
+2022-04-24 16:07:22.240 DEBUG 12252 --- [main] .SpringbootIntegratesRabbitMqApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-04-24 16:07:22.240  INFO 12252 --- [main] .SpringbootIntegratesRabbitMqApplication : The following 1 profile is active: "dev"
+2022-04-24 16:07:22.870  INFO 12252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-24 16:07:22.877  INFO 12252 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-24 16:07:22.877  INFO 12252 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-04-24 16:07:22.955  INFO 12252 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-24 16:07:22.955  INFO 12252 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 678 ms
+2022-04-24 16:07:23.412  INFO 12252 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-04-24 16:07:23.421  INFO 12252 --- [main] .SpringbootIntegratesRabbitMqApplication : Started SpringbootIntegratesRabbitMqApplication in 1.496 seconds (JVM running for 1.966)
+2022-04-24 16:07:26.077  INFO 12252 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-24 16:07:26.078  INFO 12252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-24 16:07:26.078  INFO 12252 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
